@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="css/normalize.min.css">
 </head>
 <body>
-    <header>
+
+     <!-- Шапка -->
+
+    <header class="header">
         <div class="container">
-            <div class="header">
+            <div class="header-wrapper">
                 <div class="logo"></div>
                 <nav class="nav">
                     <a href="#" class="nav-link">Главная</a>
@@ -28,5 +31,166 @@
             </div>
         </div>
     </header>
+
+    <!-- Главный блок -->
+
+    <section class="hero">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item"><a href="#" class="breadcrumbs-link">Главная</a></li>
+                <li class="breadcrumbs-item">Меню</li>
+            </ul>
+            <h1 class="hero-title">Наше Меню</h1>
+            <p class="hero-description">Выбирай из предложенного ассортимента и&nbsp;мы доставим блюдо в&nbsp;течении часа</p>
+        </div>
+    </section>
+
+    <!-- Banner -->
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner-wrapper">
+                <h2 class="banner-title">
+                    <span>Скидка</span>
+                    -30%
+                </h2>
+                <p class="banner-description">Только при&nbsp;покупке 3-х и&nbsp;более позиций, мы дарим скидку. Акции не&nbsp;суммируются.</p>
+                <button type="button" class="banner-btn">Купить сейчас</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бургеры -->
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="menu">
+                    <div class="menu-header">
+                        <h2 class="menu-title">Бургеры</h2>
+                        <select name="" id="" class="menu-down">
+                            <option value="Сортировать" disabled selected>Сортировать</option>
+                            <option value="По умолчанию">По умолчанию</option>
+                            <option value="По возрастанию цены">По возрастанию цены</option>
+                            <option value="По убыванию цены">По убыванию цены</option>
+                        </select>
+                    </div>
+                    <div class="menu-box">
+
+                         <!-- Бургер_1 -->
+
+                        <div class="menu-item">
+                            <div class="menu-thumb">
+                                <img src="img/menu/01.jpg" alt="Острый бургер">
+                            </div>
+                            <h3 class="menu-name">Острый бургер</h3>
+                            <p class="menu-price">$26</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
+
+                        <!-- Бургер_2 -->
+
+                        <div class="menu-item">
+                            <div class="menu-thumb">
+                                <img src="img/menu/02.jpg" alt="Гриль Бургер">
+                            </div>
+                            <h3 class="menu-name">Гриль Бургер</h3>
+                            <p class="menu-price">$16</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
+
+                        <!-- Бургер_3 -->
+
+                        <div class="menu-item">
+                            <div class="menu-thumb">
+                                <img src="img/menu/03.jpg" alt="Бурег Гигант">
+                            </div>
+                            <h3 class="menu-name">Бурег Гигант</h3>
+                            <p class="menu-price">$37</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
+
+                        <!-- Бургер_4 -->
+
+                        <div class="menu-item">
+                            <div class="menu-thumb">
+                                <img src="img/menu/04.jpg" alt="Бургер с курицей">
+                            </div>
+                            <h3 class="menu-name">Бургер с курицей</h3>
+                            <p class="menu-price">$18</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
+                        
+                        <!-- Бургер_5 -->
+
+                        <div class="menu-item">
+                            <div class="menu-thumb">
+                                <img src="img/menu/05.jpg" alt="Бургер с курицей">
+                            </div>
+                            <h3 class="menu-name">Бургер с курицей</h3>
+                            <p class="menu-price">$8</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
+                        
+                        <!-- Бургер_6 -->
+
+                        <div class="menu-item">
+                            <div class="menu-thumb">
+                                <img src="img/menu/06.jpg" alt="Тройной бургер">
+                            </div>
+                            <h3 class="menu-name">Тройной бургер</h3>
+                            <p class="menu-price">$7</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="menu">
+
+                    <!-- Дополнительно -->
+
+                    <h2 class="menu-title menu-title-dop">Дополнительно</h2>
+                    <div class="menu-box">
+                        
+                        <!-- Сэндвич -->
+
+                       <div class="menu-item">
+                           <div class="menu-thumb">
+                               <img src="img/menu/dop/01.jpg" alt="Сэндвич">
+                           </div>
+                           <h3 class="menu-name">Сэндвич</h3>
+                           <p class="menu-price">$3</p>
+                           <button type="button" class="menu-btn">Купить</button>
+                       </div>
+                    
+                       <!-- Картошка Фри -->
+
+                       <div class="menu-item">
+                        <div class="menu-thumb">
+                            <img src="img/menu/dop/02.jpg" alt="Картошка Фри">
+                        </div>
+                        <h3 class="menu-name">Картошка Фри</h3>
+                        <p class="menu-price">$5</p>
+                        <button type="button" class="menu-btn">Купить</button>
+                    </div>
+
+                    <!-- Хот-Дог -->
+
+                    <div class="menu-item">
+                        <div class="menu-thumb">
+                            <img src="img/menu/dop/03.jpg" alt="Хот-Дог">
+                        </div>
+                        <h3 class="menu-name">Хот-Дог</h3>
+                        <p class="menu-price">$7</p>
+                        <button type="button" class="menu-btn">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
