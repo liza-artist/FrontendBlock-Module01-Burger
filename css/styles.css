@@ -5,8 +5,12 @@
     --accent-light: #FBB731;
     --accent-dark: #F37335;
     --dark: #443737;
+    --dark-blue: #1E2F40;
     --light: #FFFFFF;
     --light-rgb: 255, 255, 255;
+    --line: #DEDEDE;
+
+    --tr:.2s;
 }
 
 
@@ -29,7 +33,7 @@ a {
 /* Шапка */
 
 .header {
-    border-bottom: 1px solid #DEDEDE;
+    border-bottom: 1px solid var(--line);
 }
 
 .header-wrapper {
@@ -47,6 +51,7 @@ a {
     background-image: url(../img/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 
 .nav {
@@ -59,6 +64,8 @@ a {
     color: var(--dark);
     font-size: 20px;
     font-weight: 600;
+    transition: var(--tr);
+    cursor: pointer;
 }
 
 .nav-link::after {
@@ -109,6 +116,38 @@ a {
     bottom: 0;
 }
 
+.button-up {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    font-family: var(--nunito-sans);
+    font-weight: 700;
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--dark-blue);
+    background-color: var(--accent-light);
+    border: none;
+    border-radius: 5px;
+    transition: var(--tr);
+    cursor: pointer;
+}
+
+.button-up:hover {
+    background-color: var(--accent-dark);
+    color: var(--light);
+}
+
+.button-up.hidden {
+    opacity: 0;
+}
+
+.button-up.visible {
+    opacity: 1;
+}
+
 /* Главный блок */ 
 
 .hero {
@@ -119,6 +158,10 @@ a {
     text-align: center;
     padding-top: 142px;
     padding-bottom: 142px;
+}
+
+.hero-contact {
+    background-image: url(../img/contact/hero-contact.jpg);
 }
 
 .breadcrumbs {
@@ -132,6 +175,7 @@ a {
     font-size: 15px;
     padding-top: 0;
     padding-bottom: 0;
+    transition: var(--tr);
 }
 
 .breadcrumbs-item {
@@ -222,20 +266,26 @@ a {
 }
 
 .banner-btn {
+    display: block;
+    max-width: 170px;
     font-size: 14px;
     font-family: var(--nunito-sans);
     font-weight: 700;
-    padding: 22px 25px;
+    padding: 22px 0;
+    text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: #1E2F40;
+    color: var(--dark-blue);
     background-color: var(--accent-light);
     border: none;
     border-radius: 5px;
+    transition: var(--tr);
+    cursor: pointer;
 }
 
 .banner-btn:hover {
     background-color: var(--accent-dark);
+    color: var(--light);
 }
 
 /* Меню */
@@ -254,9 +304,30 @@ a {
     font-family: var(--nunito-sans);
     font-size: 44px;
     font-weight: 700;
-    line-height: 126%;
+    line-height: 127%;
     color: var(--dark);
     text-transform: uppercase;
+}
+
+.menu-select {
+    color: var(--dark);
+    font-size: 15px;
+    appearance: none;
+    flex-basis: 279px;
+    background-image: url(../img/menu/arrow.svg);
+    background-size: 14px 10px;
+    background-repeat: no-repeat;
+    background-position: 89% center;
+    border: 1px solid var(--line);
+    padding: 13px 30px;
+    border-radius: 22px;
+}
+
+.menu-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 50px 20px;
 }
 
 .menu-down {
@@ -265,7 +336,7 @@ a {
     font-size: 15px;
     line-height: 126%;
     color: var(--dark);
-    border: 1px solid #DEDEDE;
+    border: 1px solid var(--line);
 }
 
 .menu-box {
@@ -274,6 +345,11 @@ a {
     grid-template-rows: auto;
     gap: 50px 20px;
     margin-bottom: 100px;
+}
+
+.menu-item {
+    font-family: var(--nunito-sans);
+    text-align: center;
 }
 
 .menu-thumb {
@@ -295,42 +371,251 @@ a {
 }
 
 .menu-name {
-    font-family: var(--nunito-sans);
-    font-size: 38px;
-    font-weight: 600;
     color: var(--dark);
+    font-size: 30px;
+    font-weight: 600;
     line-height: 126%;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .menu-price {
-    font-family: var(--nunito-sans);
+    color: rgba(var(--dark-rgba), .5);
     font-size: 20px;
     font-weight: 700;
-    line-height: 126%;
-    color: rgba(68, 55, 55, .5);
-    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .menu-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin: 0 auto;
     font-size: 14px;
     font-family: var(--nunito-sans);
     font-weight: 700;
-    padding: 10px 30px;
-    line-height: 126%;
+    padding: 11px 32px;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--dark);
+    color: var(--dark-blue);
     background-color: var(--accent-light);
     border: none;
     border-radius: 5px;
- /*   background-image: url(../img/menu/cart.svg);
-    background-repeat: no-repeat; */
+    transition: var(--tr);
+    cursor: pointer;
 }
 
-.menu-title-dop {
-    margin-bottom: 34px;
+.menu-btn::before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/menu/cart-btn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu-btn:hover {
+    background-color: var(--accent-dark);
+    color: var(--light);
+}
+
+.menu-additionally {
+    display: grid;
+}
+
+.menu-title-additionally {
+    margin-bottom: 41px;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--dark-blue);
+    padding-top: 110px;
+    padding-bottom: 120px;
+    margin-top: 140px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    display: block;
+    width: 63px;
+    height: 56px;
+    background-image: url(../img/logo_light.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer-title {
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 190%;
+    color: var(--light);
+    margin-top: 0;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-link {
+    color: rgba(var(--light-rgb), .9);
+    font-size: 15px;
+    line-height: 160%;
+    transition: var(--tr);
+
+}
+
+.footer-link:hover {
+    color: var(--accent-light);
+}
+
+.footer-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.footer-list-item {
+    font-size: 15px;
+    line-height: 160%;
+    font-weight: 700;
+    color: var(--light);
+}
+
+.footer-list span {
+    display: block;
+    font-weight: 400;
+    color: rgba(var(--light-rgb), .9); 
+}
+
+.footer-list-item:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.footer-tel {
+    display: block;
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent-light);
+    text-transform: uppercase;
+    margin-top: 12px;
+    transition: var(--tr);
+}
+
+.footer-tel:hover {
+    color: var(--light);
+}
+
+/* Контакты */
+
+.contact-main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1057px;
+    margin: 140px auto 60px;
+}
+
+.contact-map {
+    flex-basis: 680px;
+}
+
+.contact-adress {
+    flex-basis: calc(100% - 680px - 20px);
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-adress > li:not(:last-child) {
+    margin-bottom: 26px;
+}
+
+.contact-adress > li > span {
+    display: block;
+    font-size: 15px;
+    line-height: 160%;
+}
+
+.contact-adress > li > span:first-child {
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 190%;
+    text-transform: uppercase;
+    margin-left: 3px;
+    margin-bottom: 4px;
+}
+
+.contact-adress > li > span:last-child {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.contact-additionally {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1057px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto;
+}
+
+.contact-additionally > li {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-additionally > li::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-additionally > li:nth-child(1):before {
+    background-image: url(../img/contact/01.svg);
+}
+.contact-additionally > li:nth-child(2):before {
+    background-image: url(../img/contact/02.svg);
+}
+.contact-additionally > li:nth-child(3):before {
+    background-image: url(../img/contact/03.svg);
+}
+
+.contact-info,
+.contact-tel {
+    display: block;
+    color: var(--dark);
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 140%;
+    margin-top: 5px;
+}
+
+.contact-tel {
+    transition: var(--tr);
+}
+
+.contact-tel:hover {
+    color: var(--accent-light);
 }
