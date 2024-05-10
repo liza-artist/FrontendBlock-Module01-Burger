@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -17,6 +19,7 @@
     <header class="header" id="headerTop">
         <div class="container">
             <div class="header-wrapper">
+                <button class="burger-menu" onclick="openModal()"></button>
                 <div class="logo"></div>
                 <nav class="nav">
                     <a href="#" class="nav-link">Главная</a>
@@ -154,40 +157,47 @@
                     <!-- Дополнительно -->
 
                     <h2 class="menu-title menu-title-additionally">Дополнительно</h2>
-                    <div class="menu-box">
+                    <div class="menu-box _additionally">
                         
                         <!-- Сэндвич -->
 
-                       <div class="menu-item">
+                       <div class="menu-item _additionally">
                            <div class="menu-thumb">
                                <img src="img/menu/additionally/01.jpg" alt="Сэндвич">
                            </div>
-                           <h3 class="menu-name">Сэндвич</h3>
-                           <p class="menu-price">$3</p>
-                           <button type="button" class="menu-btn">Купить</button>
+                           <div class="menu-info">
+                                <h3 class="menu-name">Сэндвич</h3>
+                                <p class="menu-price">$3</p>
+                                <button type="button" class="menu-btn">Купить</button>
+                           </div>
                        </div>
                     
                        <!-- Картошка Фри -->
 
-                       <div class="menu-item">
+                       <div class="menu-item _additionally">
                         <div class="menu-thumb">
                             <img src="img/menu/additionally/02.jpg" alt="Картошка Фри">
                         </div>
-                        <h3 class="menu-name">Картошка Фри</h3>
-                        <p class="menu-price">$5</p>
-                        <button type="button" class="menu-btn">Купить</button>
-                    </div>
+                        <div class="menu-info">
+                            <h3 class="menu-name">Картошка Фри</h3>
+                            <p class="menu-price">$5</p>
+                            <button type="button" class="menu-btn">Купить</button>    
+                        </div>
+                      </div>
 
                     <!-- Хот-Дог -->
 
-                    <div class="menu-item">
+                    <div class="menu-item _additionally">
                         <div class="menu-thumb">
                             <img src="img/menu/additionally/03.jpg" alt="Хот-Дог">
                         </div>
-                        <h3 class="menu-name">Хот-Дог</h3>
-                        <p class="menu-price">$7</p>
-                        <button type="button" class="menu-btn">Купить</button>
+                        <div class="menu-info">
+                            <h3 class="menu-name">Хот-Дог</h3>
+                            <p class="menu-price">$7</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -207,6 +217,8 @@
                         <a href="#" class="footer-link">Методы оплаты</a>
                         <a href="contact.html" class="footer-link">Контакты</a>
                     </nav>
+                    <a class="footer-tel _mobile" href="tel:+79007871313">+ 7 900 787 13-13</a>
+                    <a class="footer-tel _mobile" href="tel:+79007001414">+ 7 900 700 14-14</a>
                 </div>
                 <div class="footer-item">
                     <h3 class="footer-title">Основная информация</h3>
@@ -232,6 +244,17 @@
 
      <!-- кнопка "Наверх" -->
      <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
+
+     <!-- модальное окно -->
+     <div class="modal" id="modal">
+        <nav class="nav _modal">
+            <a href="#" class="nav-link">Главная</a>
+            <a href="index.html" class="nav-link">Меню</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="contact.html" class="nav-link">Контакты</a>
+        </nav>
+        <button class="modal-close" onclick="closeModal()"></button>
+     </div>
 
      <script src="js/script.js"></script>
 
