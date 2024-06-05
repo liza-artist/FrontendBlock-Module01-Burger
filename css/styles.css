@@ -876,6 +876,18 @@ a {
     }
 }
 
+@media (max-width: 425px) {
+    .menu-name {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    .menu-name {
+        font-size: 14px;
+    }
+}
+
 .modal {
     width: 100%;
     max-width: 500px;
